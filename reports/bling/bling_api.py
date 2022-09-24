@@ -1,6 +1,7 @@
 from requests import get
 from datetime import datetime
 from .dto import GetSales
+from reports.models.sales import Sale, Item
 
 SALES_ENDPOINT = "https://bling.com.br/Api/v2/pedidos/json/"
 
@@ -13,7 +14,7 @@ class BlingClient:
 
     def list_sales(
         self, start_date: datetime, end_date: datetime, status: list[int]
-    ) -> GetSales:
+    ) -> list[Sale]:
         """
         Filter the sales from start_date and end_date (included)
         """
@@ -36,4 +37,29 @@ class BlingClient:
         )
         response = get(url)
 
-        return GetSales.parse_obj(response.json())
+        bling_sales = GetSales.parse_obj(response.json())
+
+        return self._bling_sales_to_model(bling_sales)
+
+    @staticmethod
+    def _bling_sales_to_model(bling_sales: GetSales) -> list[Sale]:
+        sales = []
+        for sale_wrapper in bling_sales.retorno.pedidos:
+            sale = sale_wrapper.pedido
+
+            sale = Sale(
+                date=sale.data,
+                total_value=sale.totalvenda,
+                items=[
+                    Item(
+                        name=i.item.descricao,
+                        qtd=i.item.quantidade,
+                        unity_price=i.item.valorunidade,
+                        discount=i.item.descontoItem,
+                    )
+                    for i in sale.itens
+                ],
+            )
+            sales.append(sale)
+
+        return sales

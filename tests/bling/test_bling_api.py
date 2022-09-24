@@ -31,4 +31,6 @@ class TestBlingClient(TestCase):
             start_date = datetime(year=2013, month=12, day=12)
             end_date = datetime(year=2014, month=2, day=5)
             client = BlingClient(api_key="123")
-            client.list_sales(start_date=start_date, end_date=end_date, status=[6, 9])
+            response = client.list_sales(
+                start_date=start_date, end_date=end_date, status=[6, 9]
+            )
