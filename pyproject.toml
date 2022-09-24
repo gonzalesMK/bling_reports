@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bling-reports"
+version = "0.1.0"
+description = "Python reports for bling ERP"
+authors = ["Juliano Negri <juliano.negri@ab-inbev.com>"]
+readme = "README.md"
+packages = [{include = "bling_reports"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^1.10.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^3.8.4"
+black = "^22.8.0"
+mypy = "^0.971"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

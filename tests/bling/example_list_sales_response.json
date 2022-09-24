@@ -1,0 +1,177 @@
+{
+   "retorno":{
+      "pedidos":[
+         {
+            "pedido":{
+               "desconto":"10,00",
+               "observacoes":"Testando o campo observações do pedido",
+               "observacaointerna":"Testando o campo observações internas do pedido",
+               "data":"2017-07-28",
+               "numero":"1",
+               "numeroPedidoLoja":"100000001",
+               "vendedor":"João da Silva",
+               "valorfrete":"39.30",
+               "totalprodutos":"399.60",
+               "totalvenda":"428.90",
+               "situacao":"Em Aberto",
+               "loja": "123456789",
+               "dataPrevista":"2017-07-28",
+               "tipoIntegracao":"Magento",
+               "cliente":{
+                  "nome":"Organisys Software",
+                  "cnpj":"00.000.000/0000-1",
+                  "ie":"0000000000",
+                  "rg":"162788484",
+                  "endereco":"Rua Visconde de São Gabriel",
+                  "numero":"000",
+                  "complemento":"Sala 000",
+                  "cidade":"Bento Gonçalves",
+                  "bairro":"Cidade Alta",
+                  "cep":"95.700-000",
+                  "uf":"RS",
+                  "email":"teste@organisys.com.br",
+                  "celular":"",
+                  "fone":"(54) 2222-2222"
+               },
+               "itens":[
+                  {
+                     "item":{
+                        "codigo":"CN01",
+                        "descricao":"Caneta 001",
+                        "quantidade":"120.00",
+                        "valorunidade":"1.68",
+                        "precocusto":"0.68",
+                        "descontoItem":"0.00",
+                        "un":"Pç",
+                        "pesoBruto": "0.520",
+                        "largura": "20",
+                        "altura": "18",
+                        "profundidade": "15",
+                        "unidadeMedida": "cm",
+                        "descricaoDetalhada": ""
+                     }
+                  },
+                  {
+                     "item":{
+                        "codigo":"23541",
+                        "descricao":"Caderno Capa 102",
+                        "quantidade":"20.00",
+                        "valorunidade":"9.90",
+                        "precocusto":"5.50",
+                        "descontoItem":"0.00",
+                        "un":"UN",
+                        "pesoBruto": null,
+                        "largura": null,
+                        "altura": null,
+                        "profundidade": null,
+                        "unidadeMedida": "cm",
+                        "descricaoDetalhada": "Caderno Avengers Infinity War"
+                     }
+                  }
+               ],
+               "parcelas":[
+                  {
+                     "parcela":{
+                        "idLancamento": "123456",
+                        "valor":"214.45",
+                        "dataVencimento":"2017-08-27 00:00:00",
+                        "obs":"Teste obs 1",
+                        "destino": "1",
+                        "forma_pagamento":{
+                           "id":"1",
+                           "descricao":"Boleto bancário",
+                           "codigoFiscal":"15"
+                        }
+                     }
+                  },
+                  {
+                     "parcela":{
+                        "idLancamento": "123457",
+                        "valor":"214.45",
+                        "dataVencimento":"2017-09-27 00:00:00",
+                        "obs":"Teste obs 2",
+                        "destino": "1",
+                        "forma_pagamento":{
+                           "id":"1",
+                           "descricao":"Boleto bancário",
+                           "codigoFiscal":"15"
+                        }
+                     }
+                  }
+               ],
+               "nota":{
+                  "serie":"1",
+                  "numero":"012346",
+                  "dataEmissao":"2017-07-28 00:00:00",
+                  "situacao":"1",
+                  "chaveAcesso":"43140401056417000139550010000123461496923524",
+                  "valorNota": "428.90"
+               },
+               "transporte":{
+                  "transportadora":"Transportadora",
+                  "cnpj":"00.000.000/0000-1",
+                  "tipo_frete":"R",
+                  "volumes":[
+                     {
+                        "volume":{
+                           "id": "6423805580",
+                           "idServico":"4523213",
+                           "servico":"PAC",
+                           "codigoServico":"04669",
+                           "codigoRastreamento":"EC272330554BR",
+                           "dataSaida":"2017-07-28",
+                           "prazoEntregaPrevisto":"5",
+                           "valorFretePrevisto":"12.00",
+                           "valorDeclarado": "0.00",
+                           "remessa":{
+                              "numero":"12345AAA",
+                              "dataCriacao":"2017-10-17"
+                           },
+                           "dimensoes":{
+                              "peso":"3.553",
+                              "altura":"20",
+                              "largura":"15",
+                              "comprimento":"20",
+                              "diametro":"0"
+                           },
+                           "urlRastreamento":"https://www.exemplo.com.br/rastreio?q=EC272330554BR"
+                        }
+                     },
+                     {
+                        "volume":{
+                           "id": "6423805635",
+                           "idServico":"1231293",
+                           "servico":"SEDEX 10",
+                           "codigoServico":"03158",
+                           "codigoRastreamento":"SX052413651BR",
+                           "dataSaida":"2017-07-28",
+                           "prazoEntregaPrevisto":"1",
+                           "valorFretePrevisto":"27.30",
+                           "remessa":null,
+                           "valorDeclarado": "80.52",
+                           "dimensoes":{
+                              "peso":"9.958",
+                              "altura":"35",
+                              "largura":"30",
+                              "comprimento":"30",
+                              "diametro":"0"
+                           }
+                        }
+                     }
+                  ],
+                  "enderecoEntrega":{
+                     "nome":"Organisys Software Entrega",
+                     "endereco":"Rua Assis Brasil",
+                     "numero":"222",
+                     "complemento":"",
+                     "cidade":"Bento Gonçalves",
+                     "bairro":"Centro",
+                     "cep":"95.700-00054",
+                     "uf":"RS"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}
