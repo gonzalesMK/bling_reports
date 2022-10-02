@@ -1,3 +1,4 @@
+from typing import Union
 from datetime import datetime
 from pydantic import BaseModel, validator
 
@@ -58,5 +59,18 @@ class Sales(BaseModel):
     pedidos: list[SaleWrapper]
 
 
+class ErrorCategory(BaseModel):
+    cod: int
+    msg: str
+
+
+class Error(BaseModel):
+    erro: ErrorCategory
+
+
+class Errors(BaseModel):
+    erros: list[Error]
+
+
 class GetSales(BaseModel):
-    retorno: Sales
+    retorno: Union[Sales, Errors]

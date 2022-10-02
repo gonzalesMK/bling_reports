@@ -1,0 +1,12 @@
+{
+    "retorno": {
+        "erros": [
+            {
+                "erro": {
+                    "cod": 14,
+                    "msg": "A informacao desejada nao foi encontrada"
+                }
+            }
+        ]
+    }
+}

@@ -1,4 +1,9 @@
+#!usr/env/bin python
 from tkinter import *
+from reports.reports.weekly_sales import generate
+from bling.bling_api import BlingClient
+
+import os
 
 
 class Table:
@@ -12,14 +17,14 @@ class Table:
                 self.e.insert(END, lst[i][j])
 
 
+# Create the client
+client = BlingClient(os.environ["BLING_API_KEY"])
+
+report = generate(client, n_weeks=1)
+repo = report[0]
+
 # take the data
-lst = [
-    (1, "Raj", "Mumbai", 19),
-    (2, "Aaryan", "Pune", 18),
-    (3, "Vaishnavi", "Mumbai", 20),
-    (4, "Rachna", "Mumbai", 21),
-    (5, "Shubham", "Delhi", 21),
-]
+lst = [(key, value.qtd, value.value) for key, value in repo.item_info.items()]
 
 # find total number of rows and
 # columns in list
